@@ -4,27 +4,37 @@
  * work well for content-centric websites.
  */
 
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("/font/NotoSansJP-VariableFont_wght.ttf") ;
+  unicode-range: U+3040-309f /* hiragana */
+  , U+30a0-30ff /* Katakana */
+  , U+3000-303f /* Japanese-style punctuation */
+  , U+4e00-9faf /* Kanji */;
+}
+
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #d1a980;
-  --ifm-color-primary-dark: #82D3E1;
-  --ifm-color-primary-darker: #005b49;
-  --ifm-color-primary-darkest: #99754e;
-  --ifm-color-primary-light: #889457;
-  --ifm-color-primary-lighter: #af9e67;
-  --ifm-color-primary-lightest: #ffebcd;
+  --ifm-color-primary: #dc0322		;
+  --ifm-color-primary-dark: #c6031f	;
+  --ifm-color-primary-darker: #bb031d		;
+  --ifm-color-primary-darkest: #9a0218		;
+  --ifm-color-primary-light: #f20325		;
+  --ifm-color-primary-lighter: #fc0528	;
+  --ifm-color-primary-lightest: #fc2644		;
   --ifm-code-font-size: 95%;
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #d1a980;
-  --ifm-color-primary-dark: #4b8078;
-  --ifm-color-primary-darker: #005b49;
-  --ifm-color-primary-darkest: #005b49;
-  --ifm-color-primary-light: #4b8078;
-  --ifm-color-primary-lighter: #005b49;
-  --ifm-color-primary-lightest: #005b49;
+  --ifm-color-primary: #d1a980	;
+  --ifm-color-primary-dark: #c89867	;
+  --ifm-color-primary-darker: #c4905b	;
+  --ifm-color-primary-darkest: #ad773f	;
+  --ifm-color-primary-light: #daba99	;
+  --ifm-color-primary-lighter: #dec2a5	;
+  --ifm-color-primary-lightest: #ecdbca	;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }

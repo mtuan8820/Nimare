@@ -9,8 +9,9 @@ const config: Config = {
   tagline: `"I created this site to capture my journey of learning and growth — a place 
       to reflect, share, and hopefully inspire others to keep exploring and improving"`,
   favicon: 'img/kanji.png',
-
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
+  customFields:{
+    upcomingJLPT: "2025-12-06T12:00:00"
+  },
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
@@ -35,6 +36,14 @@ const config: Config = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en','ja'],
+    localeConfigs:{
+      en: {
+        label: 'English',
+      },
+      ja: {
+        label: '日本語'
+      }
+    }
   },
 
 
@@ -71,11 +80,21 @@ const config: Config = {
           routeBasePath: 'grammar',
           sidebarPath: require.resolve('./sidebarsGrammar.js'),
         }
-
+      ],
+      [
+          '@docusaurus/plugin-ideal-image',
+        {
+          disableInDev: false,
+          sizes: [500, 500]
+        }
       ]
   ],
 
   themeConfig: {
+    colorMode:{
+      defaultMode: 'light',
+      disableSwitch: true,
+    },
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'Nimare',
@@ -87,21 +106,29 @@ const config: Config = {
         {
           type: 'docSidebar',
           sidebarId: 'vocabularySidebar',
-          position: 'left',
+          position: 'right',
           label: 'Vocabulary',
         },
+        // {
+        //   to: '/vocabulary/intro',
+        //   position: 'right',
+        //   label: 'Vocabulary',
+        //   activeBaseRegex: `/vocabulary/`
+        // },
         {
           to: '/grammar/grammar-intro',
-          position: 'left',
+          position: 'right',
           label: 'Grammar',
           activeBaseRegex: `/grammar/`
         },
         {to: '/blog', label: 'Blog', position: 'right'},
         {
-          href: 'https://github.com/mtuan8820/Nimare',
-          label: 'GitHub',
+          type: "localeDropdown",
           position: 'right',
-        },
+
+        }
+
+
       ],
     },
     footer: {
@@ -154,10 +181,10 @@ const config: Config = {
       ],
       copyright: `Copyright © 2025 Nimare. Built with Docusaurus.<br> Made with <3 from Hue.`,
     },
-    prism: {
-      theme: prismThemes.oneDark,
-      darkTheme: prismThemes.duotoneDark,
-    },
+    // prism: {
+    //   theme: prismThemes.oneLight,
+    //   darkTheme: prismThemes.duotoneDark,
+    // },
   } satisfies Preset.ThemeConfig,
 };
 

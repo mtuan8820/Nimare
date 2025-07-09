@@ -2,6 +2,11 @@
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
 .heroBanner {
   padding: 4rem 0;
@@ -20,4 +25,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.buttonCustom{
+  border: 1px solid #f8f8f8 !important;
+  color: #f8f8f8;
 }
