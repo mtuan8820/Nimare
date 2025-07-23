@@ -1,7 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
-
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
@@ -10,7 +8,7 @@ const config: Config = {
       to reflect, share, and hopefully inspire others to keep exploring and improving"`,
   favicon: 'img/kanji.png',
   customFields:{
-    upcomingJLPT: "2025-12-06T12:00:00"
+    upcomingJLPT: "2025-12-07T00:00:00",
   },
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
@@ -109,14 +107,9 @@ const config: Config = {
           position: 'right',
           label: 'Vocabulary',
         },
-        // {
-        //   to: '/vocabulary/intro',
-        //   position: 'right',
-        //   label: 'Vocabulary',
-        //   activeBaseRegex: `/vocabulary/`
-        // },
+
         {
-          to: '/grammar/grammar-intro',
+          to: '/grammar/category/grammar',
           position: 'right',
           label: 'Grammar',
           activeBaseRegex: `/grammar/`

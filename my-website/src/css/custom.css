@@ -13,9 +13,32 @@
   , U+4e00-9faf /* Kanji */;
 }
 
+@font-face {
+  font-family: "Noto Serif JP";
+  src: url("/font/NotoSerifJP-VariableFont_wght.ttf") ;
+  unicode-range: U+3040-309f /* hiragana */
+  , U+30a0-30ff /* Katakana */
+  , U+3000-303f /* Japanese-style punctuation */
+  , U+4e00-9faf /* Kanji */;
+}
+
+@font-face{
+  font-family: "Roboto";
+  src: url("/font/Roboto-VariableFont_wdth,wght.ttf");
+}
+
+@font-face{
+  font-family: "Fenix";
+  src: url("/font/Fenix-Regular.ttf");
+}
+
 /* You can override the default Infima variables here. */
 :root {
+  /*--ifm-font-family-base: "Fenix", "Noto Serif JP", serif;*/
+  --ifm-font-family-base: "Fenix", "Noto Sans JP", san-serif;
+
   --ifm-color-primary: #dc0322		;
+  --ifm-color-success: #277663;
   --ifm-color-primary-dark: #c6031f	;
   --ifm-color-primary-darker: #bb031d		;
   --ifm-color-primary-darkest: #9a0218		;
@@ -37,4 +60,10 @@
   --ifm-color-primary-lighter: #dec2a5	;
   --ifm-color-primary-lightest: #ecdbca	;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+html {
+
+  font-style: normal;
+  font-optical-sizing: auto;
 }

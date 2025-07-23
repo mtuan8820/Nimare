@@ -7,10 +7,9 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 // @ts-ignore
 import Image from '@theme/IdealImage';
-import CountdownCard from "@site/src/components/CountdownCard";
 
 import styles from './index.module.css';
-import Countdown from "react-countdown";
+import CountdownTimer from "@site/src/components/CountdownTimer";
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -41,12 +40,14 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
+          {/*<CountdownCard />*/}
+        <CountdownTimer />
         <HomepageFeatures />
-        <CountdownCard />
+
       </main>
     </Layout>
   );
