@@ -14,8 +14,8 @@ import CountdownTimer from "@site/src/components/CountdownTimer";
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('container hero row', styles.heroBanner)}>
-          <div className={clsx(" col col--4 col--offset-2", styles.container)}>
+    <header className={clsx('row', styles.heroBanner)}>
+          <div className={clsx(" hero col col--4 col--offset-2", styles.container)}>
               <Heading as="h1" className="hero__title text--primary">
                   {siteConfig.title}
               </Heading>
@@ -25,12 +25,12 @@ function HomepageHeader() {
                       // className={clsx('button button--lg', styles.buttonCustom)}
                       className="button button--outline button--primary"
                       to="/vocabulary/vocabulary/minna/minna-vocab-26">
-                      Getting Started
+                      Start Now
                   </Link>
               </div>
           </div>
-          <div className={clsx(styles.heroImage, 'col col--6')}>
-              <Image img={require("@site/static/img/edited.png")} alt="日本語"/>
+          <div className={clsx('col col--6', styles.heroImage)}>
+              <Image img={require("@site/static/img/coffee_cup-removebg-preview.png")} alt="coffe-cup"/>
           </div>
     </header>
   );

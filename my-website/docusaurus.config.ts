@@ -3,9 +3,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Nimare',
-  tagline: `"I created this site to capture my journey of learning and growth — a place 
-      to reflect, share, and hopefully inspire others to keep exploring and improving"`,
+  title: 'No Excuses, Just Progress',
+  tagline: `"Capturing my journey of learning and growth — to reflect, share, and inspire."`,
   favicon: 'img/kanji.png',
   customFields:{
     upcomingJLPT: "2025-12-07T00:00:00",
@@ -96,25 +95,25 @@ const config: Config = {
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'Nimare',
-      logo: {
-        alt: 'Nimare Logo',
-        src: 'img/kanji.png',
-      },
+      // logo: {
+      //   alt: 'Nimare Logo',
+      //   src: 'img/kanji.png',
+      // },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'vocabularySidebar',
-          position: 'right',
+          position: 'left',
           label: 'Vocabulary',
         },
 
         {
           to: '/grammar/category/grammar',
-          position: 'right',
+          position: 'left',
           label: 'Grammar',
           activeBaseRegex: `/grammar/`
         },
-        {to: '/blog', label: 'Blog', position: 'right'},
+        {to: '/blog', label: 'Blog', position: 'left'},
         {
           type: "localeDropdown",
           position: 'right',
@@ -125,54 +124,31 @@ const config: Config = {
       ],
     },
     footer: {
-      style: 'dark',
+      style: 'light',
       links: [
         {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Vocabulary',
-              to: '/docs/vocabulary',
-            },
-            {
-              label: 'Grammar',
-              to: '/grammar',
-            },
-          ],
+          label: 'Vocabulary',
+          to: '/docs/vocabulary',
         },
         {
-          title: 'Contact',
-          items: [
-            {
-              label: 'Facebook',
-              href: 'https://www.facebook.com/tuan.minh.25630/',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/mtuan8820/Nimare',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
+          label: 'Grammar',
+          to: '/grammar',
         },
         {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-
-            {
-              label: 'Resources',
-              to: '/resources',
-            },
-          ],
+          label: 'Blog',
+          to: '/blog',
         },
+        {
+          label: 'Facebook',
+          href: 'https://www.facebook.com/tuan.minh.25630/',
+        },
+        {
+          label: 'GitHub',
+          href: 'https://github.com/mtuan8820/Nimare',
+        },
+          
       ],
-      copyright: `Copyright © 2025 Nimare. Built with Docusaurus.<br> Made with <3 from Hue.`,
+      copyright: `Copyright © 2025 Docusaurus.`,
     },
     // prism: {
     //   theme: prismThemes.oneLight,

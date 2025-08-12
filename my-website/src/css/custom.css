@@ -37,14 +37,14 @@
   /*--ifm-font-family-base: "Fenix", "Noto Serif JP", serif;*/
   --ifm-font-family-base: "Fenix", "Noto Sans JP", san-serif;
 
-  --ifm-color-primary: #dc0322		;
-  --ifm-color-success: #277663;
-  --ifm-color-primary-dark: #c6031f	;
-  --ifm-color-primary-darker: #bb031d		;
+  --ifm-color-primary: #6d4c3d;		;
+  --ifm-color-success: hsl(156, 23%, 34%);
+  --ifm-color-primary-dark: #624437	;
+  --ifm-color-primary-darker: #5d4134		;
   --ifm-color-primary-darkest: #9a0218		;
-  --ifm-color-primary-light: #f20325		;
-  --ifm-color-primary-lighter: #fc0528	;
-  --ifm-color-primary-lightest: #fc2644		;
+  --ifm-color-primary-light: #785443		;
+  --ifm-color-primary-lighter: #7d5746	;
+  --ifm-color-primary-lightest: #996a55	;
   --ifm-code-font-size: 95%;
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
@@ -66,4 +66,9 @@ html {
 
   font-style: normal;
   font-optical-sizing: auto;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
 }
