@@ -9,30 +9,33 @@ import Heading from '@theme/Heading';
 import Image from '@theme/IdealImage';
 
 import styles from './index.module.css';
-import CountdownTimer from "@site/src/components/CountdownTimer";
+import CountdownCard from "@site/src/components/CountdownCard";
+
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('row', styles.heroBanner)}>
-          <div className={clsx(" hero col col--4 col--offset-2", styles.container)}>
-              <Heading as="h1" className="hero__title text--primary">
-                  {siteConfig.title}
-              </Heading>
-              <p className=" text--left">{siteConfig.tagline}</p>
-              <div className={styles.buttons}>
-                  <Link
-                      // className={clsx('button button--lg', styles.buttonCustom)}
-                      className="button button--outline button--primary"
-                      to="/vocabulary/vocabulary/minna/minna-vocab-26">
-                      Start Now
-                  </Link>
+          <div className={clsx("row", styles.container)}>
+              <div className={clsx("col col--3 col--offset-2", styles.firstCol)}>
+                  <Heading as="h1" className="">
+                      {siteConfig.title}
+                  </Heading>
+                  <p>{siteConfig.tagline}</p>
+                  <div className={styles.button}>
+                      <Link
+                          // className={clsx('button button--lg', styles.buttonCustom)}
+                          className="button"
+                          to="/vocabulary/vocabulary/minna/minna-vocab-26">
+                          Start Now
+                      </Link>
+                  </div>
+              </div>
+              <div className={clsx('col col--5', styles.heroImage)}>
+                  <Image img={require("@site/static/img/coffee_cup-removebg-preview.png")} alt="coffe-cup"/>
               </div>
           </div>
-          <div className={clsx('col col--6', styles.heroImage)}>
-              <Image img={require("@site/static/img/coffee_cup-removebg-preview.png")} alt="coffe-cup"/>
-          </div>
-    </header>
+
+
   );
 }
 
@@ -41,13 +44,20 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
+      description="Description will go into a meta tag in <head />"
+    >
       <main>
-          {/*<CountdownCard />*/}
-        <CountdownTimer />
-        <HomepageFeatures />
+          <section className={styles.heroBanner}>
+              <HomepageHeader />
+          </section>
 
+          <section>
+              <CountdownCard />
+          </section>
+
+          {/*<section>*/}
+          {/*    <HomepageFeatures />*/}
+          {/*</section>  */}
       </main>
     </Layout>
   );

@@ -32,13 +32,16 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en','ja'],
+    locales: ['en','ja', 'vi'],
     localeConfigs:{
       en: {
         label: 'English',
       },
       ja: {
         label: '日本語'
+      },
+      vi: {
+        label: 'Tiếng Việt'
       }
     }
   },
@@ -89,7 +92,7 @@ const config: Config = {
 
   themeConfig: {
     colorMode:{
-      defaultMode: 'light',
+      defaultMode: 'dark',
       disableSwitch: true,
     },
     image: 'img/docusaurus-social-card.jpg',

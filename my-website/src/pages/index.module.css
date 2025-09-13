@@ -1,23 +1,35 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-.container{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.heroBanner {
+  padding: 1rem 2rem;
+  display: block;
 }
 
-.heroBanner {
-  box-sizing: border-box;
-  margin: 40px 20px;
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+.container{
   border-radius: 20px;
-  border: var(--ifm-color-primary) 1px solid ;
-  width: 100%;
+  border: var(--ifm-color-primary-darker) 1px solid ;
+  background-color: var(--ifm-color-primary-lighter);
+}
+
+.firstCol{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.firstCol p{
+  color: var(--text-muted);
+}
+
+.button {
+  background-color: var(--ifm-color-primary-darker);
+  border-radius: 20px;
+  font-weight: normal;
+  width: 60%;
+  height: 40px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 996px) {
@@ -26,11 +38,7 @@
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 
 .buttonCustom{
   border: 1px solid #f8f8f8 !important;
