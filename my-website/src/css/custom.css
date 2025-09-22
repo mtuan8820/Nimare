@@ -34,6 +34,7 @@
 
 
 :root {
+  --spacing: 0.25rem;
   --ifm-font-family-base: "Fenix", "Noto Sans JP", san-serif;
 
   --bg-dark: hsl(15, 9%, 100%);
@@ -53,10 +54,15 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
+h2{
+  margin-top: 0;
+}
+
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --text-muted: hsl(216 13% 84%);
-
+  --text-muted: hsl(217.9 12% 64%);
+  --text-muted__highlight: #8abcf8;
+  --text: #fff;
   /* header */
   --ifm-navbar-background-color: hsl(224.05 72% 4%);
   --ifm-navbar-link-hover-color: #fff; /* active link color */
@@ -72,7 +78,7 @@
   /* */
   --ifm-link-color: var(--text-muted);
   --ifm-background-color: hsl(224.05 72% 4%);
-  /*--ifm-color-primary: hsl(15, 9%, 0%)	;*/
+  --ifm-color-primary: hsl(195.82 100% 50%)	;
   /*--ifm-color-primary-dark: #c89867	;*/
   /*--ifm-color-primary-darker: #c4905b	;*/
   /*--ifm-color-primary-darkest: #ad773f	;*/
@@ -98,4 +104,32 @@ table {
 
 html, body {
   height: 100%;
+}
+
+.text--muted{
+  color: var(--text-muted);
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb{
+  margin: 0 0 var(--ifm-paragraph-margin-bottom);
+}
+
+p{
+  margin: 0;
+}
+
+
+/* remove default css of em, change text color to highlight, for cleaner md file */
+p em, li em{
+  font-style: normal;
+  color: var(--text-muted__highlight)
+}
+
+.text--muted em{
+  font-style: normal;
+  color: var(--text)
 }
