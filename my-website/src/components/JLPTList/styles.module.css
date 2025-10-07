@@ -1,0 +1,40 @@
+.list{
+    gap: calc(var(--spacing) * 2);
+    background-color:     color-mix(in oklab,  #fff 2.5%, transparent);
+    padding: calc(var(--spacing) * 2);
+    /* border:  1px var(--border-color);
+    border-top-style: solid;
+    border-bottom-style: solid; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.subtitle{
+    color: var(--pink-color);
+    font-size: 0.75rem;
+    line-height: calc(1/.75);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+.list a{
+    border: 1px solid var(--border-color);
+    padding-block: calc(var(--spacing) * 4);
+    background-color: var(--ifm-background-color);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.list a:hover{
+    background-color: color-mix(in oklab,  #fff 5%, transparent);
+}
+
+h3{
+    color: var(--text);
+}
+
+.desc{
+    font-size: var(--text-sm);
+    line-height: calc(var(--spacing) * 7);
+}

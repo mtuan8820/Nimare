@@ -34,9 +34,15 @@
 
 
 :root {
+  /* spacing & padding */
   --spacing: 0.25rem;
-  --ifm-font-family-base: "Fenix", "Noto Sans JP", san-serif;
+  --section-padding: 1rem 2rem ;
 
+  /* font */
+  --ifm-font-family-base: "Fenix", "Noto Sans JP", san-serif;
+  --ifm-code-font-size: 95%;
+  --text-sm: 0.875rem;
+  /* colors */
   --bg-dark: hsl(15, 9%, 100%);
   --bg: hsl(15, 9%, 95%);
   --bg-light: hsl(15, 9%, 90%);
@@ -44,14 +50,18 @@
   --text: hsl(0 0% 5%);
   --text-muted: hsl(0 0% 30%);
 
+  --pink-color: hsl(327.47 95% 69%);
+
   --ifm-color-primary-darker: #6D4C3D;
   --ifm-color-primary: #B7A196;
   --ifm-color-primary-lighter: #E9DDD8;
   --ifm-color-success: #426A5A;
 
-  --ifm-code-font-size: 95%;
-
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* others */
+  --pattern-fg: color-mix(in oklab, #fff 10%,transparent)
+
 }
 
 h2{
@@ -63,6 +73,8 @@ h2{
   --text-muted: hsl(217.9 12% 64%);
   --text-muted__highlight: #8abcf8;
   --text: #fff;
+  --border-color:  color-mix(in oklab, #fff 10%, transparent);
+
   /* header */
   --ifm-navbar-background-color: hsl(224.05 72% 4%);
   --ifm-navbar-link-hover-color: #fff; /* active link color */
@@ -132,4 +144,32 @@ p em, li em{
 .text--muted em{
   font-style: normal;
   color: var(--text)
+}
+
+.before-pattern, .after-pattern{
+  position: relative;
+}
+
+.before-pattern::before {
+  content: "";
+  position: absolute;
+  left: -100vw;
+  background-color: var(--border-color);
+  height: 1px;
+  width: 200vw;
+  top: 0;
+}
+
+.after-pattern::after {
+  content: "";
+  position: absolute;
+  left: -100vw;
+  background-color: var(--border-color);
+  height: 1px;
+  width: 200vw;
+  bottom: 0;
+}
+
+body{
+    overflow-x: hidden !important;
 }
